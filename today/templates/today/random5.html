@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사진 고르기</title>
+</head>
+<body>
+    <h1>마음에 드는 사진을 선택하세요.</h1>
+    {% for record in records %}
+        <a href="{% url 'style_list' id=record.1 %}">
+            <img src="{{ record.0 }}" style="width:200px; height:200px;"></a>
+    {% endfor %}
+</body>
+</html>

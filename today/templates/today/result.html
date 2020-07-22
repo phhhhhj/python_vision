@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>추천 결과</title>
+</head>
+<body>
+    <h1>추천 스타일: {{ best }}</h1>
+    <hr>
+    <h3>선태한 이미지와 비슷한 스타일의 인테리어 사진입니다.</h3>
+    {% for record in records %}
+        <img src="{{ record.0 }}"
+             style="width:200px; height:200px;">
+    {% endfor %}
+    <hr>
+    <h5>추천 이미지의 비전 분석 결과: {{ word.0 }}</h5>
+</body>
+</html>
